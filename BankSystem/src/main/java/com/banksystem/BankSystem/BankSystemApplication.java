@@ -1,5 +1,9 @@
 package com.banksystem.BankSystem;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,12 +14,8 @@ public class BankSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BankSystemApplication.class, args);
-		WebDriverFactory driver = new WebDriverFactory();
-		try {
-			driver.createDriver();
-		}catch(InterruptedException e) {
-			e.printStackTrace();
-		}
+		
+		
 		
 	}
 

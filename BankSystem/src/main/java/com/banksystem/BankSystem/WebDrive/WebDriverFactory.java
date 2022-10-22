@@ -2,6 +2,7 @@ package com.banksystem.BankSystem.WebDrive;
 
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -28,9 +29,9 @@ public class WebDriverFactory {
 	private static boolean randomizeBrowser;
 	private static String defaultBrowser;
 	
-	private static String tckimlik="41008707478", password="531453";
+	private static String tckimlik="", password="";
 	
-	
+	private static Scanner scanner = new Scanner(System.in);
 	
 	private static final Random random = new Random();
 	
@@ -75,6 +76,11 @@ public class WebDriverFactory {
 	}
 	
 	public static void createDriver() throws InterruptedException {
+		System.out.println("Lütfen Tc kimli giriniz");
+		tckimlik = scanner.nextLine();
+		scanner.nextLine();
+		password = scanner.nextLine();
+		
 		String browserType = defaultBrowser;
 		
 		if(randomizeBrowser) {
