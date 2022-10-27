@@ -79,6 +79,7 @@ public class WebDriverFactory {
 		System.out.println("Lütfen Tc kimli giriniz");
 		tckimlik = scanner.nextLine();
 		scanner.nextLine();
+		System.out.println("Lütfen Tc kimli giriniz");
 		password = scanner.nextLine();
 		
 		String browserType = defaultBrowser;

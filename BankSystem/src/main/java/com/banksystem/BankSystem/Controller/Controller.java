@@ -1,7 +1,6 @@
-package com.banksystem.Controller;
+package com.banksystem.BankSystem.Controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.banksystem.BankSystem.WebDrive.WebDriverFactory;
 
@@ -10,7 +9,7 @@ public class Controller {
 
 	
 	
-	@RequestMapping("/hey")
+	@RequestMapping(path = "/h")
 	public String sayHi(){
 		try {
 			new WebDriverFactory().createDriver();
